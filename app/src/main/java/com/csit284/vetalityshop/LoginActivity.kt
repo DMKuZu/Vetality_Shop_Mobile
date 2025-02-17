@@ -1,6 +1,7 @@
 package com.csit284.vetalityshop
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,6 +28,9 @@ class LoginActivity : Activity() {
                 Toast.makeText(this, "Fields cannot be empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+            val intent = Intent(this, LandingActivity::class.java)
+            startActivity(intent)
         }
     }
 

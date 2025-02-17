@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="24dp"
     tools:context=".LoginActivity">
@@ -16,9 +16,21 @@
         android:layout_height="290dp"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logo1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:text="LOG IN"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="HardcodedText"/>
 
     <EditText
         android:id="@+id/username"
