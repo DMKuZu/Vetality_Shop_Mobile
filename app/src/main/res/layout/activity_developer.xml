@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -8,20 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/btn_close"
-            android:layout_width="44dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:background="@android:color/transparent"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="8dp"
-            android:text="<"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp">
 
 
         <TextView
