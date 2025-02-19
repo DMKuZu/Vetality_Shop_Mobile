@@ -5,25 +5,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LandingActivity">
+    tools:context=".LandingActivity" >
 
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Welcome to Vetality Shop!"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="493dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:contentDescription="Profile"
+            android:src="@drawable/person_filled"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:contentDescription="Settings"
+            android:src="@drawable/settings_filled"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
