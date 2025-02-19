@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Settings"
-            android:textSize="24dp"
+            android:textSize="24dp"/>
     </LinearLayout>
 
 
