@@ -1,16 +1,19 @@
 package com.csit284.vetalityshop
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedCallback
 
-class LandingActivity : Activity() {
+class LandingActivity : ComponentActivity() {
+    private var backPressedOnce = false
+    private val backPressHandler = Handler(Looper.getMainLooper())
+    private val backPressRunnable = Runnable { backPressedOnce = false }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
@@ -26,5 +29,23 @@ class LandingActivity : Activity() {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
+
+        // exits the app when back button is pressed twice in a row
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (backPressedOnce) {
+                    finishAffinity()
+                } else {
+                    backPressedOnce = true
+                    Toast.makeText(this@LandingActivity, "Press again to exit", Toast.LENGTH_SHORT).show()
+                    backPressHandler.postDelayed(backPressRunnable, 2000)
+                }
+            }
+        })
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        backPressHandler.removeCallbacks(backPressRunnable)
+    }
+
 }
