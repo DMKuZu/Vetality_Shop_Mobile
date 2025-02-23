@@ -19,6 +19,7 @@ class LoginActivity : Activity() {
         val usernameEditText = findViewById<EditText>(R.id.username)
         val passwordEditText = findViewById<EditText>(R.id.password)
         val loginButton = findViewById<Button>(R.id.login_button)
+        val registerButton = findViewById<Button>(R.id.register_button)
 
         loginButton.setOnClickListener {
             val username = usernameEditText.text
@@ -30,6 +31,11 @@ class LoginActivity : Activity() {
             }
 
             val intent = Intent(this, LandingActivity::class.java)
+            startActivity(intent)
+        }
+
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }
