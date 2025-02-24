@@ -18,6 +18,7 @@ class LandingActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
+        val cart = findViewById<ImageButton>(R.id.cart)
         val home = findViewById<ImageButton>(R.id.home)
         val favourites = findViewById<ImageButton>(R.id.favourites)
         val list = findViewById<ImageButton>(R.id.list)
