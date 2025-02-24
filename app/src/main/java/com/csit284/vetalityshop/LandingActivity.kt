@@ -18,15 +18,19 @@ class LandingActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
-        val settings = findViewById<ImageButton>(R.id.settings)
+        val home = findViewById<ImageButton>(R.id.home)
+        val favourites = findViewById<ImageButton>(R.id.favourites)
+        val list = findViewById<ImageButton>(R.id.list)
         val profile = findViewById<ImageButton>(R.id.profile)
+        var intent : Intent
 
-        settings.setOnClickListener{
-            val intent = Intent(this, SettingsActivity::class.java)
+        home.setOnClickListener{
+            intent = Intent(this, LandingActivity::class.java)
             startActivity(intent)
         }
+
         profile.setOnClickListener{
-            val intent = Intent(this, ProfileActivity::class.java)
+            intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
 

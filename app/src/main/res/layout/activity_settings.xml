@@ -20,7 +20,7 @@
             android:id="@+id/icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/settings_filled"
+            android:src="@drawable/icon_settings_filled"
             android:contentDescription="Settings"/>
 
         <TextView
