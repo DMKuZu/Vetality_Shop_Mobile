@@ -7,18 +7,29 @@
     tools:context=".LandingActivity"
     tools:ignore="HardcodedText">
 
-
+<!--    need to actually make this work-->
     <EditText
         android:id="@+id/search"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints=""
-        android:ems="10"
         android:hint="Search"
-        android:inputType="textFilter"
         app:layout_constraintBottom_toTopOf="@+id/searchbar"
         app:layout_constraintEnd_toStartOf="@+id/grid3"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/cart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        android:contentDescription="Settings"
+        android:src="@drawable/icon_filled_cart"
+        app:layout_constraintBottom_toTopOf="@id/searchbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -32,35 +43,21 @@
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/searchbar" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Currently a Work in Progress!"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/navbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.059" />
-
-    <ImageButton
-        android:id="@+id/cart"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/gray"
-        android:contentDescription="Settings"
-        android:src="@drawable/icon_filled_cart"
-        app:layout_constraintBottom_toTopOf="@id/searchbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/search"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageButton
         android:id="@+id/home"
