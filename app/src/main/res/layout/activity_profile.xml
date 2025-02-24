@@ -20,8 +20,7 @@
         app:layout_constraintBottom_toTopOf="@+id/searchbar"
         app:layout_constraintEnd_toStartOf="@+id/grid3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </EditText>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
         android:id="@+id/cart"
@@ -42,8 +41,8 @@
         android:layout_height="0dp"
         android:src="@drawable/img_default_profile"
         app:layout_constraintBottom_toTopOf="@id/Hprofilebar"
-        app:layout_constraintStart_toEndOf="@id/Vprofilebar1"
         app:layout_constraintEnd_toStartOf="@id/Vprofilebar2"
+        app:layout_constraintStart_toEndOf="@id/Vprofilebar1"
         app:layout_constraintTop_toBottomOf="@+id/searchbar" />
 
     <TextView
@@ -61,32 +60,49 @@
 
     <ImageButton
         android:id="@+id/edit"
-        android:layout_width="41dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:background="transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:contentDescription="Edit Profile"
         android:src="@drawable/icon_filled_edit"
         app:layout_constraintBottom_toTopOf="@+id/Hprofilebar"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Vprofilebar2"
         app:layout_constraintStart_toStartOf="@+id/defaultname"
         app:layout_constraintTop_toBottomOf="@+id/defaultname"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.461" />
 
     <ImageButton
         android:id="@+id/settings"
-        android:layout_width="38dp"
-        android:layout_height="27dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="transparent"
+        android:background="@android:color/transparent"
         android:contentDescription="Edit Profile"
         android:src="@drawable/icon_filled_settings"
         app:layout_constraintBottom_toTopOf="@+id/Hprofilebar"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edit"
+        app:layout_constraintTop_toBottomOf="@+id/defaultname" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="Edit Profile"
+        android:src="@drawable/icon_filled_logout"
+        app:layout_constraintBottom_toTopOf="@+id/Hprofilebar"
         app:layout_constraintEnd_toEndOf="@+id/defaultname"
-        app:layout_constraintTop_toBottomOf="@+id/defaultname"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/settings"
+        app:layout_constraintTop_toBottomOf="@+id/defaultname" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/wip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -120,7 +136,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/grid2"
         app:layout_constraintStart_toStartOf="@+id/grid1"
-        app:layout_constraintTop_toTopOf="@+id/navbar"/>
+        app:layout_constraintTop_toTopOf="@+id/navbar" />
 
     <ImageButton
         android:id="@+id/list"
@@ -132,7 +148,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/grid3"
         app:layout_constraintStart_toStartOf="@+id/grid2"
-        app:layout_constraintTop_toTopOf="@+id/navbar"/>
+        app:layout_constraintTop_toTopOf="@+id/navbar" />
 
     <ImageButton
         android:id="@+id/profile"
@@ -144,7 +160,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/grid3"
-        app:layout_constraintTop_toTopOf="@+id/navbar"/>
+        app:layout_constraintTop_toTopOf="@+id/navbar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/grid1"

@@ -25,11 +25,6 @@ class LandingActivity : ComponentActivity() {
         val profile = findViewById<ImageButton>(R.id.profile)
         var intent : Intent
 
-        home.setOnClickListener{
-            intent = Intent(this, LandingActivity::class.java)
-            startActivity(intent)
-        }
-
         profile.setOnClickListener{
             intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)

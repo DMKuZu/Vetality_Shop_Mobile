@@ -18,6 +18,7 @@ class ProfileActivity : Activity() {
 
         val edit = findViewById<ImageButton>(R.id.edit)
         val settings = findViewById<ImageButton>(R.id.settings)
+        val logout = findViewById<ImageButton>(R.id.logout)
         val cart = findViewById<ImageButton>(R.id.cart)
         val home = findViewById<ImageButton>(R.id.home)
         val favourites = findViewById<ImageButton>(R.id.favourites)
@@ -30,13 +31,12 @@ class ProfileActivity : Activity() {
             startActivity(intent)
         }
 
-        home.setOnClickListener{
-            intent = Intent(this, LandingActivity::class.java)
-            startActivity(intent)
+        logout.setOnClickListener{
+            showLogoutConfirmationDialog()
         }
 
-        profile.setOnClickListener{
-            intent = Intent(this, ProfileActivity::class.java)
+        home.setOnClickListener{
+            intent = Intent(this, LandingActivity::class.java)
             startActivity(intent)
         }
     }

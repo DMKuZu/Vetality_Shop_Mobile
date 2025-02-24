@@ -14,11 +14,11 @@
         android:layout_height="0dp"
         android:autofillHints=""
         android:hint="Search"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/searchbar"
         app:layout_constraintEnd_toStartOf="@+id/grid3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </EditText>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
         android:id="@+id/cart"
