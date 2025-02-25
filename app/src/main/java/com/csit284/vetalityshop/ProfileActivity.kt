@@ -14,7 +14,6 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 
 class ProfileActivity : Activity() {
-
 //    private lateinit var defaultProfile: Bitmap
     private lateinit var defaultName: String
     private val REQUEST_CODE_EDIT_PROFILE = 1

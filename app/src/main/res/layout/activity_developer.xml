@@ -7,6 +7,8 @@
     tools:context=".DeveloperActivity"
     tools:ignore="HardcodedText">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -50,6 +52,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/john"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="top_bg"
+                android:src="@drawable/img_about_john"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="top_bg"
+                android:src="@drawable/img_about_sol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/john"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </ScrollView>
 

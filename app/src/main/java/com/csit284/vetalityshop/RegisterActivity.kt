@@ -22,16 +22,16 @@ class RegisterActivity : Activity() {
         val registerButton = findViewById<Button>(R.id.register_button)
 
         registerButton.setOnClickListener {
-            val username = usernameEditText.text
-            val password = passwordEditText.text
-            val confirm = confirmEditText.text
+            val username = usernameEditText.text.toString()
+            val password = passwordEditText.text.toString()
+            val confirm = confirmEditText.text.toString()
 
-            if (username.isNullOrEmpty() || password.isNullOrEmpty() || confirm.isNullOrEmpty()) {
+            if (username.isEmpty() || password.isEmpty() || confirm.isEmpty()) {
                 Toast.makeText(this, "Fields cannot be empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            if(!confirm.equals(password)){
+            if(confirm != password){
                 Toast.makeText(this, "Password is not equal!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
